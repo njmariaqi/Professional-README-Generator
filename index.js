@@ -1,11 +1,14 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const { title } = require('process');
 
 inquirer
      .prompt(
           [
                {
-                    name:
+                    name: 'title',
+                    type: 'input',
+                    message: ''
                }
           ]
      )
