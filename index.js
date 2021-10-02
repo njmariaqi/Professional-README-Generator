@@ -39,7 +39,7 @@ inquirer
                     name: 'license',
                     type: 'checkbox',
                     message: 'What is the license of your project?',
-                    choices: ['public domain', 'permissive license', 'copyleft', 'proprietary', 'trade secrete']
+                    choices: ['CC0 1.0', 'CC By 4.0', 'CC BY-SA 4.0', 'CC BY-NC 4.0', 'CC BY-NC-SA 4.0']
                },
                {
                     name: 'github',
