@@ -39,7 +39,7 @@ inquirer
                     name: 'license',
                     type: 'checkbox',
                     message: 'What is the license of your project?',
-                    choices: ['CC0 1.0', 'CC By 4.0', 'CC BY-SA 4.0', 'CC BY-NC 4.0', 'CC BY-NC-SA 4.0']
+                    choices: ['CC0_1.0', 'CC_BY_4.0', 'CC_BY-SA_4.0', 'CC_BY-NC_4.0', 'CC_BY-NC-SA 4.0']
                },
                {
                     name: 'github',
@@ -61,7 +61,34 @@ inquirer
      .then(function(response) {
           fs.writeFile('ReadMe.md',
           `
-          
+# ${response.title}
+![License Badge](./images/${response.license}.svg)
+## **Table of Contents**
+* [description](#description)
+* [installation instruction](#installation-instruction)
+* [usage](#usage)
+* [contribution](#contribution)
+* [test](#test)
+* [questions](#questions)
+
+## **description**
+${response.description}
+
+## **installation instruction**
+${response.instruction}
+
+## **usage**
+${response.usage}
+
+## **contribution**
+${response.contribution}
+
+## **test**
+${response.test}
+
+## **questions**
+my GitHub: [${response.github}](https://${response.link})
+my E-mail: ${response.email}
           `, 
           (err) => err? console.error(error):console.log('Success!'))
      })
